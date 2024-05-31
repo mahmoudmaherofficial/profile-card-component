@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "KumbhSans";
+  src: url(../fonts/KumbhSans-Variable.ttf);
+}
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+  --white: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--Dark-cyan);
+  margin: 0;
+  padding: 0;
+  font-family: "KumbhSans";
+  font-size: 16px;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: url(../imgs/bg-pattern-top.svg),
+    url(../imgs/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .card {
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 1;
+}
+main .card .cover {
+  width: 100%;
+}
+main .card .cover img {
+  display: block;
+  width: 100%;
+}
+main .card .content {
+  position: relative;
+}
+main .card .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--white);
+  background-color: #000;
+}
+main .card .avatar img {
+  width: 100%;
+  display: block;
+}
+.content .name {
+  margin-top: 70px;
+}
+.content .name h2 {
+  font-size: 20px;
+  color: var(--Very-dark-desaturated-blue);
+}
+.content .name h2 span {
+  font-weight: 400;
+  color: var(--Dark-grayish-blue);
+  font-size: 18px;
+  padding-left: 3px;
+}
+.content .name p {
+  color: var(--Dark-grayish-blue);
+  margin: 10px auto;
+}
+.content hr {
+  height: 1px;
+  background-color: var(--Dark-gray);
+  margin: 30px auto;
+  border: none;
+}
+.content .items {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px auto;
+  width: 100%;
+}
+.content .items .item h2 {
+  color: var(--Very-dark-desaturated-blue);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.content .items .item p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--Dark-grayish-blue);
+}
